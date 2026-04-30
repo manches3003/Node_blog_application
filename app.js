@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const dotenv = require('dotenv');
 const { sequelize } = require('./app/config/database');
 const postRoutes = require('./app/routes/api/posts');
@@ -16,6 +17,14 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api', postRoutes);
+
+// Serve React frontend static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Catch-all route to serve index.html for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Health check endpoint
 app.get('/', (req, res) => {
