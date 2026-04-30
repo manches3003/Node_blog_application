@@ -57,7 +57,7 @@ jobs:
           cache-to: type=inline
 
       - name: Setup minikube
-        uses: manusa/actions-setup-minikube@v2
+        uses: manusa/actions-setup-minikube@v2.10.0
         with:
           minikube-version: latest
           kubernetes-version: v1.28.0
