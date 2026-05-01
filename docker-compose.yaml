@@ -10,8 +10,8 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/node_blog_db
-      - SECRET_KEY=dev-secret-key-change-in-production
+      - DATABASE_URL=postgresql://postgres:KES92%40pk@postgres:5432/node_blog_db
+      - SECRET_KEY=dev-secret-key
     depends_on:
       postgres:
         condition: service_healthy

@@ -23,7 +23,7 @@ spec:
         - name: POSTGRES_USER
           value: "postgres"
         - name: POSTGRES_PASSWORD
-          value: "postgres"
+          value: "KES92@pk"
         - name: POSTGRES_DB
           value: "node_blog_db"
         resources:
