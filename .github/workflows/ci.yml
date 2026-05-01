@@ -64,7 +64,7 @@ jobs:
 
       - name: Deploy to minikube
         run: |
-          minikube image pull ${{ secrets.DOCKERHUB_USERNAME }}/node-blog-app:latest
+          minikube image pull ${{ secrets.DOCKERHUB_USERNAME }}/node-blog-app
           kubectl create secret generic node-blog-secrets \
             --from-literal=DATABASE_URL="postgresql://postgres:KES92%40pk@postgres:5432/node_blog_db" \
             --from-literal=SECRET_KEY="dev-secret-key" \
