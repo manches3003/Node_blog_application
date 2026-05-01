@@ -30,7 +30,7 @@ services:
     container_name: node-blog-postgres
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=KES92@pk
+      - POSTGRES_PASSWORD=KES92%40pk
       - POSTGRES_DB=node_blog_db
     volumes:
       - postgres-data:/var/lib/postgresql/data
